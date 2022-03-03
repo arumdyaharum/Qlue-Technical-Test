@@ -10,7 +10,15 @@ function App() {
   }, [dispatch]);
   return (
     <div className="App">
-      { data.length > 0 ? JSON.stringify(data) : "loading..." }
+      { data.length === 0 ? "loading..."
+      : data.map((arr) => (
+        <div key={arr.id}>
+          <p>{ arr.full_name }</p>
+          <p>{ arr.expert_skills.join(", ") || "-" }</p>
+          <br/>
+        </div>
+      ))
+      }
     </div>
   );
 }
