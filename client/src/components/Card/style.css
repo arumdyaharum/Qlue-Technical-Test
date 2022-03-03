@@ -1,0 +1,14 @@
+.cardContainer {
+  padding: 10px 0;
+  background-color: cadetblue;
+  border-radius: 10px;
+  text-align: center;
+  width: calc(50% - 10px);
+  margin: 5px;
+  color: white;
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 30px;
+}

@@ -2,7 +2,7 @@
 
 ## Server
 - cd server
-- npx json-server --watch db.json
+- npm start
 
 ## Client
 - Go to link
