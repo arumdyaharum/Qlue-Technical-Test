@@ -1,0 +1,58 @@
+.profileContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.profileCard {
+  width: 30%;
+  height: calc(100% - 70px);
+  padding: 25px;
+  background-color: rgb(223, 168, 86);
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.profileImage {
+  width: 200px;
+  height: 200px;
+}
+
+.imagePin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 50%;
+  background-color: rgb(255, 211, 146);
+}
+
+.profileTitle {
+  font-size: 30px;
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+.expertSkills {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.skill {
+  font-size: 24px;
+}
+
+.lorem {
+  text-align: justify;
+}
