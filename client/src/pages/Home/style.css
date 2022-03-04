@@ -2,3 +2,16 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.createButton {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  padding: 4px 12px 2px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 900;
+}

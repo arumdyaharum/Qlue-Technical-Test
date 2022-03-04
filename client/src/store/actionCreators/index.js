@@ -35,3 +35,34 @@ export const fetchData = () => {
       });
   }
 }
+
+export const postData = (data) => {
+  return (dispatch, getState) => new Promise((resolve, reject) => {
+    const { baseURL } = getState();
+    let skills = {};
+    data.skills.forEach((el) => {
+      skills[el] = "expert";
+    });
+    fetch(`${baseURL}/data`, {
+      method: "POST",
+      body: JSON.stringify({
+        first_name: data.name.split(" ")[0],
+        last_name: data.name.split(" ")[1],
+        skills,
+      }),
+      headers: {
+      "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if(!response.ok) return response.json().then((err) => { throw(err) });
+        return response.json();
+      })
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  })
+}
